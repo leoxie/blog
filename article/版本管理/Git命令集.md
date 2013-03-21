@@ -7,15 +7,12 @@ Git命令集
 	- /etc/gitconfig ：系统中对所有用户都普遍适用的配置。
 
 			git config --system
-
 	- ~/.gitconfig ：用户目录下的配置文件只适用于该用户。
 
 			git config --global
-
 	- .git/config : 工作目录中的配置文件只适用于该项目。
 
 			git config --local
-
 2. 用户信息
 	
 		git config --global user.name "John Doe"
@@ -159,33 +156,29 @@ Git命令集
 			git push remote-name branch-name[:remote-branch-name]
 			git push origin xxx
 			git push origin xxx:newxxx
-
 	- 抓取远程分支
 
 			git fetch remote-name
-
 	- 将远程分支合并到当前分支
 
 			git merge remote-name/branch-name
-
 	- 分化出新的远程分支（跟踪分支）
 
 			git chechout -b newbranch-name remote-name/branch-name
 			git chechout --track remote-name/branch-name
-
 	- 推拉数据（当前是跟踪分支的情况下）
 
 			git pull // 拉取数据，并且合并到当前分支(fetch 拉取数据不合并)
 			git push // 同远程仓库的推送数据)
-
 	- 删除远程分支
 
 			git push remote-name (此处为空格):remote-branch-name //类似推送远程分支，即用空分支来删除远程分支
-
 7. 衍合(rebase)分支  
-	把一个分支整合到另一个分支的办法有两种：merge 和 rebase。  
+	把一个分支整合到另一个分支的办法有两种：merge 和 rebase。
 	merge是将两者的结果合并，rebase是将一个分支的提交在另一分支上重新播放一次。  
+
 	**一旦分支中的提交对象发布到公共仓库，就千万不要对该分支进行衍合操作。**  
+
 	假设有3个分支(master、server、client)
 
 		git rebase --onto master server client
