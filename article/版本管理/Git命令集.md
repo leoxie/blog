@@ -198,3 +198,37 @@ Git命令集
 	最后删除server、client分支即可。  
 	衍合只是在推送之前清理本地提交历史的手段，即本地整理分支，不能对已提交的对象进行rebase。
 
+[分支范围](http://blog.jobbole.com/26112/#id344)
+-------------
+1. 双点
+
+		git log master..experiment  //所有在 master 而不在 experiment 中的提交
+		git log origin/master..     //查看要推送哪些commit去远程服务器
+
+2. 三点
+
+		git log master...experiment //两个引用中的一个包含但又不被两者同时包含
+
+[储藏Stashing](http://blog.jobbole.com/26112)
+-------------
+切换分支时，当前分支有未提交的，但是又不想立即提交，可以暂存起来。
+
+1. 暂存当前分支
+
+		git stash
+2. 查看暂存
+
+		git stash list
+3. 应用储存，默认是最近的，也可以指定
+		
+		git stash apply [stash@{2}]
+4. 移除指定的储存
+		
+		git stash drop [stash@{2}]
+5. 应用储存,并移除
+
+		git stash pop
+6. 从储藏中创建分支
+
+		git stash branch branch-name
+
