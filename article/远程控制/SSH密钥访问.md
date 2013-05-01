@@ -65,13 +65,13 @@ SSH主机别名
 当然是缺省公钥 ~/.ssh/id_rsa.pub 。  
 那么如何用新建的公钥连接 server 呢？
 SSH 的客户端配置文件 ~/.ssh/config 可以通过创建主机别名，在连接主机时，使用特定的公钥。
+	
+	chmod 600 ~/.ssh/config
 例如 ~/.ssh/config 文件中的下列配置：
 
-	host github
-      user git
-  	  hostname github.com
-      port 22
-      identityfile ~/.ssh/github
+    Host github.com
+     IdentityFile ~/.ssh/github
+     User git
 
 当执行
 	
