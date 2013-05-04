@@ -1,7 +1,7 @@
 Git命令集
 ===========
-
-[配置](http://blog.jobbole.com/25775/)
+http://blog.jobbole.com/25775/
+[配置]()
 -----------
 1. 文件说明
 	- /etc/gitconfig ：系统中对所有用户都普遍适用的配置。
@@ -40,6 +40,11 @@ Git命令集
 		git config --global alias.br branch
 		git config --global alias.ci commit
 		git config --global alias.st status 
+
+8. [设置全局忽略文件](https://help.github.com/articles/ignoring-files)
+
+		git config --global core.excludesfile ~/.gitignore_global
+
 
 [基础](http://blog.jobbole.com/25808/)
 -----------
