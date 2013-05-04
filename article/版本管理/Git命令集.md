@@ -1,7 +1,6 @@
 Git命令集
 ===========
-http://blog.jobbole.com/25775/
-[配置]()
+[配置](http://blog.jobbole.com/25775/)
 -----------
 1. 文件说明
 	- /etc/gitconfig ：系统中对所有用户都普遍适用的配置。
@@ -22,7 +21,7 @@ http://blog.jobbole.com/25775/
 
 		git config --global core.editor emacs
 
-4. 差异分析工具
+4. [差异分析工具](http://blog.jobbole.com/26131/#id372)
 
 		git config --global merge.tool vimdiff
 
@@ -45,6 +44,9 @@ http://blog.jobbole.com/25775/
 
 		git config --global core.excludesfile ~/.gitignore_global
 
+9. 着色
+
+		git config --global color.ui true
 
 [基础](http://blog.jobbole.com/25808/)
 -----------
