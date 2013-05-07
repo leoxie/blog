@@ -128,7 +128,7 @@ Git命令集
 2. 查看标签
 
 		git tag 
-		git tag show v1.4
+		git tag show v1.4t
 
 3. 推送标签
 
@@ -238,4 +238,25 @@ Git命令集
 6. 从储藏中创建分支
 
 		git stash branch branch-name
+
+[子模块](http://blog.jobbole.com/26112/)
+-------------
+可以在项目下管理子模块，该子模块不会提交到仓库。
+
+1. 添加子模块
+
+		git submodule add git://xxx.git dirxxx
+2. 初始化子模块
+
+		git submodule init (第一次clone项目的时候可以进行)
+3. 更新子模块
+		
+		git submodule update (会从仓库拉起最新的数据)
+4. 切换子模块tag
+		
+		cd dirxxx
+		git checkout xxx //xxx为tag或者分支名
+ 
+
+
 
