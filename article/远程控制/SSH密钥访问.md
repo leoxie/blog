@@ -21,6 +21,11 @@ SSH密钥访问
 		
 		ssh-keygen
 
+5.  出现拒绝请求情况
+
+		修改sshd_config 
+		StrictModes no
+
 客户端设置
 ----------------
 #### PuTTy设置
